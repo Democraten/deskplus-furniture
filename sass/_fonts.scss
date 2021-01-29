@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('/fonts/Rubik-Regular.eot');
+    src: url('/fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Rubik-Regular.woff') format('woff'),
+    url('/fonts/Rubik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url('/fonts/Poppins-Medium.eot');
+    src: url('/fonts/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Poppins-Medium.woff') format('woff'),
+    url('/fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins Semibold';
+    src: url('/fonts/Poppins-SemiBold.eot');
+    src: url('/fonts/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Poppins-SemiBold.woff') format('woff'),
+    url('/fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin light{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #B1B6CA;
+}
