@@ -1,4 +1,9 @@
 .hero
+    position: relative
+    &::before
+        +round
+        bottom: 0
+        left: 0
     &__background
         display: block
         position: relative
@@ -24,6 +29,7 @@
         &_search
             height: 51px
         &__input
+            width: 300px
             height: 100%
             outline: none
             border: none
@@ -33,4 +39,5 @@
         &__button
             padding: 13px 39px
             height: 100%
+            margin-left: -5px
         

@@ -1,0 +1,54 @@
+.kits
+    margin-bottom: 80px
+    &__title
+        text-align: center
+        margin-top: 0
+        margin-bottom: 30px
+    &_cards
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        &_card
+            position: relative
+            width: 355px
+            margin-top: 20px
+            margin-right: 20px
+            &:first-child::before
+                +dots
+                top: -125px
+                left: -50px
+            &:last-child
+                margin-right: 0               
+    &_card
+        &__img
+            width: 100%
+        &__tag
+            position: absolute
+            top: 13px
+            left: 13px
+            text-transform: uppercase
+            padding: 11px 20px
+            color: #ffffff
+            background-color: $primary
+        &_description
+            position: absolute
+            bottom: 0
+            width: 100%
+            height: 55px
+            display: flex
+            justify-content: space-between
+            background-color: $primary
+            color: #ffffff
+        &__title
+            padding: 13px
+            font-family: 'Poppins Medium'
+            font-style: normal
+            font-weight: 500
+            font-size: 20px
+            line-height: 30px
+        &__price
+            margin: 8px
+            padding: 9px 16px
+            border: 1.5px solid #FFFFFF
+            border-radius: 5px
+    

@@ -1,12 +1,40 @@
+@mixin corner
+    content: ''
+    width: 160px
+    height: 130px
+    position: absolute
+    background-image: url(../img/corner.png)      
+
+@mixin dots
+    content: url('../img/dots.png')
+    position: absolute
+    z-index: -1
+@mixin round
+    content: url('../img/round.png')
+    position: absolute
+    z-index: -1
+
 *
     text-decoration: none
-    
+
+h2
+    font-family: 'Poppins Semibold'
+    font-style: normal
+    font-weight: 500
+    font-size: 52px
+    line-height: 64px
+    color: #000000
+
 .underlined
     display: block
     width: 65%
     height: 3px
     margin: auto
     background-color: $primary
+    &_left
+        margin: 0
+    &_bold
+        height: 6px
 
 .button
     text-transform: uppercase
@@ -15,3 +43,14 @@
     border: none
     border-radius: 0
     padding: 20px 50px
+
+.corner
+    &_left_bottom::before
+        +corner
+        left: 0
+        bottom: -30px
+    &_right_top::before
+        +corner
+        right: 0
+        top: 0px
+        transform: rotate(180deg)
