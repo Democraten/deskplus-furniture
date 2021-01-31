@@ -1,0 +1,26 @@
+.article
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &_image
+        margin-top: 40px
+        position: relative
+        width: 50%
+        &::before
+            +dots
+    &_info
+        width: 50%
+        max-width: 445px
+        display: flex
+        flex-direction: column
+        margin-right: 20px
+        margin-top: 40px
+        &_title
+            &__text
+                margin: -10px 0 5px -2px
+        &__description
+            +light
+            margin-bottom: 50px
+            margin-top: 20px
+        &__button
+            align-self: flex-start

@@ -56,6 +56,27 @@ h2 {
   color: #000000;
 }
 
+h3 {
+  margin: 0;
+  font-family: 'Poppins Semibold';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 45px;
+  color: #000000;
+}
+
+h4 {
+  margin: 0;
+  font-family: 'Poppins Medium';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 34px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
 .underlined {
   display: block;
   width: 65%;
@@ -83,10 +104,10 @@ h2 {
 
 .corner_left_bottom::before {
   content: '';
-  width: 160px;
-  height: 130px;
+  width: 154px;
+  height: 141px;
   position: absolute;
-  background-image: url(../img/corner.png);
+  background-image: url(../img/corner.svg);
   z-index: -2;
   left: 0;
   bottom: -30px;
@@ -94,10 +115,10 @@ h2 {
 
 .corner_right_top::before {
   content: '';
-  width: 160px;
-  height: 130px;
+  width: 154px;
+  height: 141px;
   position: absolute;
-  background-image: url(../img/corner.png);
+  background-image: url(../img/corner.svg);
   z-index: -2;
   right: 0;
   top: 0px;
@@ -111,6 +132,64 @@ h2 {
 
 .hidden {
   opacity: 0;
+}
+
+.article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.article_image {
+  margin-top: 40px;
+  position: relative;
+  width: 50%;
+}
+
+.article_image::before {
+  content: url("../img/dots.svg");
+  position: absolute;
+  z-index: -1;
+}
+
+.article_info {
+  width: 50%;
+  max-width: 445px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+
+.article_info_title__text {
+  margin: -10px 0 5px -2px;
+}
+
+.article_info__description {
+  margin: 20px 0;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #B1B6CA;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.article_info__button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .header_wrapper {
@@ -164,7 +243,7 @@ h2 {
 }
 
 .hero::before {
-  content: url("../img/round.png");
+  content: url("../img/round.svg");
   position: absolute;
   z-index: -1;
   bottom: 0;
@@ -203,6 +282,7 @@ h2 {
   margin: 0;
   margin-top: 5px;
   margin-bottom: 23px;
+  margin: 20px 0;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: normal;
@@ -260,7 +340,7 @@ h2 {
 }
 
 .kits_cards_card:first-child::before {
-  content: url("../img/dots.png");
+  content: url("../img/dots.svg");
   position: absolute;
   z-index: -1;
   top: -125px;
@@ -316,78 +396,13 @@ h2 {
   border-radius: 5px;
 }
 
-.furniture {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.furniture_image {
-  margin-top: 40px;
-  position: relative;
-  width: 50%;
-}
-
 .furniture_image::before {
-  content: url("../img/dots.png");
-  position: absolute;
-  z-index: -1;
   bottom: -80px;
-  right: -8px;
-}
-
-.furniture_info {
-  width: 50%;
-  max-width: 445px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-right: 20px;
-  margin-top: 40px;
-}
-
-.furniture_info__subtitle {
-  margin: 0;
-  font-family: 'Poppins Medium';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 34px;
-  text-transform: uppercase;
-  color: #000000;
+  right: -75px;
 }
 
 .furniture_info_title {
   max-width: 240px;
-}
-
-.furniture_info_title__text {
-  margin: -10px 0 5px -2px;
-}
-
-.furniture_info__description {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 28px;
-  color: #B1B6CA;
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
-
-.furniture_info__button {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
 }
 
 .video {
@@ -425,5 +440,97 @@ h2 {
   height: 124px;
   top: calc(50% - 62px);
   left: calc(50% - 62px);
+}
+
+.benefits_info {
+  margin-bottom: 40px;
+}
+
+.benefits_title {
+  max-width: 450px;
+}
+
+.benefits__title {
+  margin-bottom: 10px;
+}
+
+.benefits_cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.benefits_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 345px;
+  margin-top: 20px;
+}
+
+.benefits_card_icon {
+  -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.07);
+          box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.07);
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  margin-right: 16px;
+}
+
+.benefits_card__icon {
+  padding: 15px;
+}
+
+.benefits_card_info {
+  max-width: 60%;
+}
+
+.benefits_card_info__title {
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+.benefits_card_info__description {
+  margin: 20px 0;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #B1B6CA;
+  margin: 0;
+}
+
+.disk {
+  margin: 100px 0;
+  max-width: 1050px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*&_info
+        margin-top: 100px */
+}
+
+.disk_image {
+  width: 480px;
+  margin-right: 80px;
+}
+
+.disk_image::before {
+  bottom: -105px;
+  left: -105px;
+}
+
+.disk_image::after {
+  position: absolute;
+  content: url("../img/disk.png");
+  z-index: 2;
+  bottom: -100px;
+  right: -80px;
 }
 /*# sourceMappingURL=style.css.map */
