@@ -3,7 +3,8 @@
     width: 160px
     height: 130px
     position: absolute
-    background-image: url(../img/corner.png)      
+    background-image: url(../img/corner.png)   
+    z-index: -2   
 
 @mixin dots
     content: url('../img/dots.png')
@@ -16,6 +17,10 @@
 
 *
     text-decoration: none
+
+img
+    width: 100%
+    height: auto
 
 h2
     font-family: 'Poppins Semibold'
@@ -54,3 +59,8 @@ h2
         right: 0
         top: 0px
         transform: rotate(180deg)
+
+.invisible
+    display: none
+.hidden
+    opacity: 0

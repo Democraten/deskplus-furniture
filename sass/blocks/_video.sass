@@ -1,0 +1,27 @@
+.video
+    position: relative
+    &__video
+        position: absolute
+        width: 100%
+        top: 0
+        left: 0
+        z-index: -1
+    &_placeholder
+        position: relative
+        cursor: pointer
+        transition: opacity 0.5s ease-in-out
+        &__sepia
+            position: absolute
+            top: 0
+            left: 0
+            background-color: #152242
+            width: 100%
+            height: 100%
+            opacity: 0.5
+        &__img
+        &__play
+            position: absolute
+            width: 124px
+            height: 124px
+            top: calc(50% - 62px)
+            left: calc(50% - 62px)

@@ -42,6 +42,11 @@
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 h2 {
   font-family: 'Poppins Semibold';
   font-style: normal;
@@ -82,6 +87,7 @@ h2 {
   height: 130px;
   position: absolute;
   background-image: url(../img/corner.png);
+  z-index: -2;
   left: 0;
   bottom: -30px;
 }
@@ -92,10 +98,19 @@ h2 {
   height: 130px;
   position: absolute;
   background-image: url(../img/corner.png);
+  z-index: -2;
   right: 0;
   top: 0px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.invisible {
+  display: none;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .header_wrapper {
@@ -373,5 +388,42 @@ h2 {
 .furniture_info__button {
   -ms-flex-item-align: start;
       align-self: flex-start;
+}
+
+.video {
+  position: relative;
+}
+
+.video__video {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.video_placeholder {
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.video_placeholder__sepia {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #152242;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.video_placeholder__play {
+  position: absolute;
+  width: 124px;
+  height: 124px;
+  top: calc(50% - 62px);
+  left: calc(50% - 62px);
 }
 /*# sourceMappingURL=style.css.map */
