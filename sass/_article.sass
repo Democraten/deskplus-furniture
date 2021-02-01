@@ -24,3 +24,21 @@
             margin-top: 20px
         &__button
             align-self: flex-start
+
+@media screen and ( max-width: 1280px)
+    .article
+        &_image
+            &::before
+                display: none
+@media screen and ( max-width: 1035px)
+    .article
+        &_image
+            width: 40%
+@media screen and ( max-width: 840px)
+    .article
+        &_image
+            width: 100%
+        &_info
+            max-width: none
+            width: 100%
+            margin: 0

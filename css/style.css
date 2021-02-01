@@ -9,9 +9,19 @@
   margin: auto;
 }
 
+.main {
+  max-width: 1965px;
+}
+
 .main_section {
   position: relative;
   padding: 120px 0px;
+}
+
+@media screen and (max-width: 690px) {
+  .main_section {
+    padding: 30px 0;
+  }
 }
 
 @font-face {
@@ -150,6 +160,29 @@ h4 {
   opacity: 0;
 }
 
+@media screen and (max-width: 1200px) {
+  .corner_left_bottom::before {
+    display: none;
+  }
+  .corner_right_top::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h2 {
+    font-size: 45px;
+    line-height: 57px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  h2 {
+    font-size: 35px;
+    line-height: 38px;
+  }
+}
+
 .article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -208,6 +241,29 @@ h4 {
       align-self: flex-start;
 }
 
+@media screen and (max-width: 1280px) {
+  .article_image::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1035px) {
+  .article_image {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .article_image {
+    width: 100%;
+  }
+  .article_info {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+  }
+}
+
 .header_wrapper {
   position: relative;
 }
@@ -254,7 +310,54 @@ h4 {
   line-height: 24px;
 }
 
+@media screen and (max-width: 720px) {
+  .header {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .header_links {
+    padding: 20px;
+    background-color: rgba(21, 34, 66, 0.5);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header_links__link {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .header_links__link > .underlined {
+    background-color: #fff;
+  }
+  .header_links__text {
+    color: #ffffff;
+  }
+  .header_links__button {
+    background-color: #083C6E;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header__logo_link {
+    margin: auto;
+    margin-bottom: 50px;
+  }
+}
+
 .hero {
+  display: contents;
   position: relative;
 }
 
@@ -269,29 +372,31 @@ h4 {
 .hero__background {
   display: block;
   position: relative;
+  float: right;
   z-index: -1;
+  max-width: 854px;
 }
 
 .hero_form {
   position: absolute;
   top: 40%;
+}
+
+.hero_form_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .hero_form__title {
   font-family: 'Poppins Semibold';
   font-style: normal;
-  font-weight: 600;
+  font-weight: normal;
   font-size: 60px;
   line-height: 75px;
   text-transform: uppercase;
   margin: 0;
+  margin-left: -3px;
 }
 
 .hero_form__description {
@@ -308,11 +413,21 @@ h4 {
 }
 
 .hero_form_search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 51px;
 }
 
 .hero_form__input {
-  width: 300px;
+  min-width: 100px;
+  max-width: 300px;
   height: 100%;
   outline: none;
   border: none;
@@ -325,6 +440,93 @@ h4 {
   padding: 13px 39px;
   height: 100%;
   margin-left: -5px;
+}
+
+.hero_form__button::before {
+  content: 'Search';
+}
+
+@media screen and (max-width: 1430px) {
+  .hero_form__description {
+    color: #000000;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .hero::before {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .hero_form {
+    position: relative;
+  }
+  .hero_form__description {
+    margin: 20px 0;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #B1B6CA;
+  }
+  .hero_form__title {
+    display: inline-block;
+    margin-top: 50px;
+  }
+  .hero_form_wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .hero_form_search {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .hero_form__title {
+    font-size: 45px;
+    line-height: 60px;
+  }
+  .hero_form__description {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero_form__button {
+    position: relative;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+  }
+  .hero_form__button::before {
+    content: url(/img/icon-search.svg);
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .hero_form__title {
+    font-size: 35px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .hero_form__title {
+    margin-top: 80px;
+  }
 }
 
 .kits {
@@ -389,6 +591,9 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -397,7 +602,7 @@ h4 {
 }
 
 .kits_card__title {
-  padding: 13px;
+  padding-left: 13px;
   font-family: 'Poppins Medium';
   font-style: normal;
   font-weight: 500;
@@ -410,6 +615,49 @@ h4 {
   padding: 9px 16px;
   border: 1.5px solid #FFFFFF;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 811px) {
+  .kits_cards_card:last-child {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .kits_cards_card {
+    margin-right: 0;
+  }
+  .kits_cards_card:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .kits_cards_card:first-child::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .kits__title {
+    margin-bottom: 15px;
+  }
+  .kits_card__tag {
+    background-color: rgba(8, 60, 110, 0.7);
+  }
+  .kits_card_description {
+    background-color: rgba(8, 60, 110, 0.7);
+  }
+  .kits_card__title {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .kits_card__title {
+    line-height: 17px;
+  }
 }
 
 .furniture_image::before {

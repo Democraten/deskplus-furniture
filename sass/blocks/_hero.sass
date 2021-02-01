@@ -1,4 +1,5 @@
 .hero
+    display: contents
     position: relative
     &::before
         +round
@@ -7,29 +8,36 @@
     &__background
         display: block
         position: relative
+        float: right
         z-index: -1
+        max-width: 854px
     &_form
         position: absolute
         top: 40%
-        display: flex
-        flex-direction: column
+        &_wrapper
+            display: flex
         &__title
             font-family: 'Poppins Semibold'
             font-style: normal
-            font-weight: 600
+            font-weight: normal
             font-size: 60px
             line-height: 75px
             text-transform: uppercase
             margin: 0
+            margin-left: -3px
         &__description
             margin: 0
             margin-top: 5px
             margin-bottom: 23px
             +light
         &_search
+            display: flex
+            justify-content: flex-start
+            align-items: center
             height: 51px
         &__input
-            width: 300px
+            min-width: 100px
+            max-width: 300px
             height: 100%
             outline: none
             border: none
@@ -40,4 +48,69 @@
             padding: 13px 39px
             height: 100%
             margin-left: -5px
-        
+            &::before
+                content: 'Search'
+
+@media screen and ( max-width:  1430px)
+    .hero
+        &_form
+            &__description
+                color: #000000
+          
+@media screen and ( max-width:  850px)
+    .hero
+        &::before
+            opacity: 0    
+
+@media screen and ( max-width: 690px)
+    .hero
+        &_form
+            position: relative
+            &__description
+                +light
+            &__title
+                display: inline-block
+                margin-top: 50px
+            &_wrapper
+                justify-content: center
+                text-align: center
+                margin-bottom: 50px
+            &_search
+                justify-content: center
+
+@media screen and ( max-width: 470px)
+    .hero
+        &_form
+            &__title
+                font-size: 45px
+                line-height: 60px
+            &__description
+                margin-top: 0
+@media screen and ( max-width: 420px)
+    .hero
+        &_form
+            &__button
+                position: relative
+                padding: 0
+                width: 50px
+                height: 50px
+                &::before
+                    content:  url(/img/icon-search.svg)
+                    position: absolute
+                    top: 13px
+                    left: 13px
+                    width: 25px
+                    height: 25px
+@media screen and ( max-width: 340px)
+    .hero
+        &_form
+            &__title
+                font-size: 35px
+                line-height: 50px
+@media screen and ( max-width: 300px)
+    .hero
+        &_form
+            &__title
+                margin-top: 80px
+    
+                    

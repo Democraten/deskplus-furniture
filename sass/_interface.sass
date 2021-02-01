@@ -81,3 +81,19 @@ h4
     display: none
 .hidden
     opacity: 0
+
+@media screen and ( max-width: 1200px)
+    .corner
+        &_left_bottom::before
+            display: none
+        &_right_top::before
+            display: none
+@media screen and ( max-width: 420px)
+    h2
+        font-size: 45px
+        line-height: 57px
+@media screen and ( max-width: 340px)
+    h2
+        font-size: 35px
+        line-height: 38px
+    

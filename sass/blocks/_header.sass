@@ -24,3 +24,30 @@
             font-weight: 600
             font-size: 14px
             line-height: 24px
+
+@media screen and ( max-width:  720px)
+    .header
+        align-items: flex-start
+        &_links
+            padding: 20px
+            background-color: transparentize($secondary,0.5)
+            flex-direction: column
+            justify-content: center
+            &__link
+                margin-right: 0
+                margin-bottom: 20px
+                &>.underlined
+                    background-color: #fff
+            &__text
+                color: #ffffff
+            &__button
+                background-color: $primary
+
+@media screen and ( max-width: 420px)
+    .header
+        display: grid
+        justify-content: center
+        &__logo_link
+            margin: auto
+            margin-bottom: 50px
+    

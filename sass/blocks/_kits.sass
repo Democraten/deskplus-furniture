@@ -36,11 +36,12 @@
             width: 100%
             height: 55px
             display: flex
+            align-items: center
             justify-content: space-between
             background-color: $primary
             color: #ffffff
         &__title
-            padding: 13px
+            padding-left: 13px
             font-family: 'Poppins Medium'
             font-style: normal
             font-weight: 500
@@ -52,3 +53,41 @@
             border: 1.5px solid #FFFFFF
             border-radius: 5px
     
+
+@media screen and ( max-width: 811px)
+    .kits
+        &_cards
+            &_card
+                &:last-child
+                    margin-right: 20px
+@media screen and ( max-width: 700px)
+    .kits
+        &_cards
+            &_card
+                margin-right: 0
+                &:last-child
+                    margin-right: 0
+@media screen and ( max-width: 690px)
+    .kits
+        &_cards
+            &_card
+                &:first-child
+                    &::before
+                        display: none
+@media screen and ( max-width: 380px)
+    .kits
+        &__title
+            margin-bottom: 15px
+        &_card
+            &__tag
+                background-color: transparentize($primary, 0.3)
+            &_description
+                background-color: transparentize($primary, 0.3)
+            &__title
+                font-size: 15px
+                line-height: 25px       
+@media screen and ( max-width: 280px)
+    .kits
+        &_card
+            &__title      
+                line-height: 17px      
