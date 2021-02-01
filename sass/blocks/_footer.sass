@@ -1,0 +1,84 @@
+.footer
+    position: relative
+    color: #ffffff
+    &_column
+        &__title
+            font-family: 'Avenir LT Heavy'
+            font-size: 18px
+            line-height: 30px
+            text-transform: uppercase
+        &_list
+            list-style: none
+            padding: 0
+            &__item
+                margin-bottom: 20px
+        &_social
+            display: flex
+            justify-content: space-between
+            max-width: 196px
+            margin-top: 50px
+            &__icon
+                font-size: 24px
+                color: #ffffff
+    &__underline
+        margin: auto
+        background: rgba(255, 255, 255, 0.15)
+        height: 1px
+    &_payments
+        display: flex
+        justify-content: flex-end
+        padding: 20px 0
+        &__payment
+            width: 38px
+            height: 24px
+            margin-right: 8px
+            &:last-child
+                margin-right: 0
+    &_columns
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom: 80px
+    &_placeholder
+        position: absolute
+        bottom: 0px
+        left: 0
+        background-color: #152242
+        width: 100%
+        height: 80%
+        z-index: -1
+    &_form
+        background-color: #F8F8F8
+        margin-bottom: 110px
+        &_inner
+            max-width: 780px
+            margin: auto
+            padding: 75px 0
+        &_title
+            margin: auto
+            max-width: 500px
+            &__text
+                color: #083C6E
+            &__underlined
+                margin: 10px auto
+                width: 30%
+        &__description
+            +light
+            text-align: center
+            margin-top: 25px
+            margin-bottom: 40px
+        &_input
+            display: flex
+            width: 100%
+            height: 70px
+            background: #FFFFFF
+            border: 1px solid #075DB0
+            &__input
+                border: none
+                outline: none
+                text-transform: uppercase
+                color: #706464
+                padding: 0 30px
+                flex-grow: 1 
+            &__button
+                margin: 3px

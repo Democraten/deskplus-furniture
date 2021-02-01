@@ -25,6 +25,24 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Avenir LT Light';
+    src: url('/fonts/AvenirLT-Light.eot');
+    src: url('/fonts/AvenirLT-Light.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/AvenirLT-Light.woff') format('woff'),
+    url('/fonts/AvenirLT-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir LT Heavy';
+    src: url('/fonts/AvenirLT-Heavy.eot');
+    src: url('/fonts/AvenirLT-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/AvenirLT-Heavy.woff') format('woff'),
+    url('/fonts/AvenirLT-Heavy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @mixin light{
     margin: 20px 0;
