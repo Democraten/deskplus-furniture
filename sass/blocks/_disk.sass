@@ -1,19 +1,54 @@
 .disk
     margin: 100px 0
+    margin-bottom: 0
     max-width: 1050px
     align-items: center
     /*&_info
         margin-top: 100px
     &_image
-        width: 480px
-        margin-right: 80px
+        max-width: 480px
         &::before
-            bottom: -105px
+            bottom: 0px
             left: -105px
         &::after
             position: absolute
-            content: url('../img/disk.png')
             z-index: 2
-            bottom: -100px
-            right: -80px
+            top: 0
+            left: 0
+            width: 200px
+            height: 200px
+            padding-left: 30px
+            content: '30% OFF'
+            background: #083C6E
+            opacity: 0.8
+            border-radius: 0px 0px 200px 0px
+            color: #ffffff
+            font-family: 'Poppins Semibold'
+            font-style: normal
+            font-size: 55px
+            line-height: 97%
+            display: flex
+            align-items: center
+            letter-spacing: 0.05em
+            text-transform: uppercase
 
+@media screen and (max-width:  840px)
+    .disk
+        margin: 30px 0
+        justify-content: center
+
+=min-icon
+    width: 100px
+    height: 100px
+    padding-left: 10px
+    font-size: 30px
+@media screen and (min-width: 0px) and (max-width: 420px)
+    .disk
+        &_image
+            &::after
+                +min-icon
+@media screen and (min-width: 841px) and ( max-width: 1035px)
+    .disk
+        &_image
+            &::after
+                +min-icon

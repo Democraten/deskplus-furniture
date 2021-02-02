@@ -2,6 +2,7 @@
     position: relative
     color: #ffffff
     &_column
+        margin-right: 40px
         &__title
             font-family: 'Avenir LT Heavy'
             font-size: 18px
@@ -51,13 +52,14 @@
         background-color: #F8F8F8
         margin-bottom: 110px
         &_inner
-            max-width: 780px
+            max-width: 90%
             margin: auto
             padding: 75px 0
         &_title
             margin: auto
             max-width: 500px
             &__text
+                text-align: center
                 color: #083C6E
             &__underlined
                 margin: 10px auto
@@ -82,3 +84,49 @@
                 flex-grow: 1 
             &__button
                 margin: 3px
+
+@media screen and ( max-width: 800px)
+    .footer
+        &_container
+            width: 100%
+        &_form
+            margin-bottom: 20px
+        &_column
+            &:first-child
+                margin-left: 40px
+            &:last-child
+                margin-right: 0
+        &_columns
+            justify-content: center
+@media screen and ( max-width: 550px)
+    .footer
+        &_form
+            &_title
+                &__text
+                    font-size: 35px
+                    line-height: 40px
+            &_input
+                font-size: 13px
+                &__button
+                    padding: 15px
+                &__input
+                    padding: 0 10px
+            &_inner
+                padding: 35px 0  
+        &_column
+            width: 100%
+            margin-right: 0
+            text-align: center
+            &_social
+                margin: 50px auto
+            &:first-child
+                margin-left: 0
+@media screen and ( max-width: 355px)
+    .footer
+        &_form
+            &_input
+                font-size: 10px
+        &_payments
+            &__payment
+                width: 33px
+                height: 19px

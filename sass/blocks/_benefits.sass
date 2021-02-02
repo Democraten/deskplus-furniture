@@ -29,3 +29,34 @@
             &__description
                 +light
                 margin: 0
+
+@media screen and ( max-width: 1180px)
+    .benefits
+        &_cards
+            justify-content: center
+@media screen and (max-width: 420px)
+    .benefits
+        &_info
+            margin-bottom: 20px
+        &_title
+            &>.underlined_bold
+                height: 3px
+        &_card
+            &_info
+                &__title
+                    font-size: 25px
+                &__description
+                    font-size: 15px
+                    line-height: 25px
+@media screen and ( max-width: 340px)
+    .benefits
+        &_card
+            &_icon
+                width: 60px
+                height: 60px
+            &_info
+                &__title
+                    font-size: 20px
+                &__description
+                    font-size: 13px
+                    line-height: 18px
