@@ -37,18 +37,12 @@
         margin: 30px 0
         justify-content: center
 
-=min-icon
-    width: 100px
-    height: 100px
-    padding-left: 10px
-    font-size: 30px
-@media screen and (min-width: 0px) and (max-width: 420px)
+
+@media screen and (min-width: 0px) and (max-width: 420px), (min-width: 841px) and ( max-width: 1035px)
     .disk
         &_image
             &::after
-                +min-icon
-@media screen and (min-width: 841px) and ( max-width: 1035px)
-    .disk
-        &_image
-            &::after
-                +min-icon
+                width: 100px
+                height: 100px
+                padding-left: 10px
+                font-size: 30px

@@ -1,6 +1,5 @@
 .footer
     position: relative
-    color: #ffffff
     &_column
         margin-right: 40px
         &__title
@@ -8,11 +7,23 @@
             font-size: 18px
             line-height: 30px
             text-transform: uppercase
+            color: #ffffff
         &_list
             list-style: none
             padding: 0
             &__item
+                color: #ffffff
+                font-family: 'Avenir LT Light'
+                font-size: 18px
+                line-height: 22px
+            &__link
+                font-family: 'Avenir LT Light'
+                font-size: 18px
+                line-height: 30px
+                color: #ffffff
                 margin-bottom: 20px
+                &:hover
+                    opacity: 0.8
         &_social
             display: flex
             justify-content: space-between
@@ -21,6 +32,8 @@
             &__icon
                 font-size: 24px
                 color: #ffffff
+                &:hover
+                    opacity: 0.8
     &__underline
         margin: auto
         background: rgba(255, 255, 255, 0.15)

@@ -126,6 +126,12 @@ h4 {
   border: none;
   border-radius: 0;
   padding: 20px 50px;
+  border: solid 2px #083C6E;
+}
+
+.button:hover {
+  color: #083C6E;
+  background-color: #fff;
 }
 
 .corner_left_bottom::before {
@@ -153,11 +159,15 @@ h4 {
 }
 
 .invisible {
-  display: none;
+  display: none !important;
 }
 
 .hidden {
   opacity: 0;
+}
+
+.anim {
+  visibility: hidden;
 }
 
 @media screen and (max-width: 1200px) {
@@ -314,10 +324,14 @@ h4 {
 
 .header_links__link {
   margin-right: 60px;
+  color: #083C6E;
+}
+
+.header_links__link:hover {
+  opacity: 0.3;
 }
 
 .header_links__text {
-  color: #083C6E;
   font-family: 'Poppins Medium';
   font-weight: 600;
   font-size: 14px;
@@ -344,12 +358,13 @@ h4 {
   .header_links__link {
     margin-right: 0;
     margin-bottom: 20px;
+    color: #ffffff;
   }
   .header_links__link > .underlined {
     background-color: #fff;
   }
-  .header_links__text {
-    color: #ffffff;
+  .header_links__link:hover {
+    color: #083C6E;
   }
   .header_links__button {
     background-color: #083C6E;
@@ -364,9 +379,11 @@ h4 {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .header_links {
+    margin-top: 50px;
+  }
   .header__logo_link {
     margin: auto;
-    margin-bottom: 50px;
   }
 }
 
@@ -581,6 +598,10 @@ h4 {
 
 .kits_cards_card:last-child {
   margin-right: 0;
+}
+
+.kits_cards_card:hover {
+  opacity: 0.5;
 }
 
 .kits_card__img {
@@ -900,16 +921,7 @@ h4 {
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 420px) {
-  .disk_image::after {
-    width: 100px;
-    height: 100px;
-    padding-left: 10px;
-    font-size: 30px;
-  }
-}
-
-@media screen and (min-width: 841px) and (max-width: 1035px) {
+@media screen and (min-width: 0px) and (max-width: 420px), (min-width: 841px) and (max-width: 1035px) {
   .disk_image::after {
     width: 100px;
     height: 100px;
@@ -920,7 +932,6 @@ h4 {
 
 .footer {
   position: relative;
-  color: #ffffff;
 }
 
 .footer_column {
@@ -932,6 +943,7 @@ h4 {
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
+  color: #ffffff;
 }
 
 .footer_column_list {
@@ -940,7 +952,22 @@ h4 {
 }
 
 .footer_column_list__item {
+  color: #ffffff;
+  font-family: 'Avenir LT Light';
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.footer_column_list__link {
+  font-family: 'Avenir LT Light';
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
   margin-bottom: 20px;
+}
+
+.footer_column_list__link:hover {
+  opacity: 0.8;
 }
 
 .footer_column_social {
@@ -957,6 +984,10 @@ h4 {
 .footer_column_social__icon {
   font-size: 24px;
   color: #ffffff;
+}
+
+.footer_column_social__icon:hover {
+  opacity: 0.8;
 }
 
 .footer__underline {

@@ -18,8 +18,10 @@
         align-items: center
         &__link
             margin-right: 60px
-        &__text
             color: $primary
+            &:hover
+                opacity: 0.3
+        &__text
             font-family: 'Poppins Medium'
             font-weight: 600
             font-size: 14px
@@ -36,10 +38,11 @@
             &__link
                 margin-right: 0
                 margin-bottom: 20px
+                color: #ffffff
                 &>.underlined
                     background-color: #fff
-            &__text
-                color: #ffffff
+                &:hover
+                    color: $primary             
             &__button
                 background-color: $primary
 
@@ -47,7 +50,7 @@
     .header
         display: grid
         justify-content: center
+        &_links
+            margin-top: 50px
         &__logo_link
             margin: auto
-            margin-bottom: 50px
-    

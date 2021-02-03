@@ -65,6 +65,11 @@ h4
     border: none
     border-radius: 0
     padding: 20px 50px
+    border: solid 2px $primary
+    &:hover
+        color: $primary
+        background-color: #fff
+
 
 .corner
     &_left_bottom::before
@@ -78,9 +83,11 @@ h4
         transform: rotate(180deg)
 
 .invisible
-    display: none
+    display: none !important
 .hidden
     opacity: 0
+.anim
+    visibility: hidden
 
 @media screen and ( max-width: 1200px)
     .corner
